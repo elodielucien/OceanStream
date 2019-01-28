@@ -1,0 +1,121 @@
+  body 
+  {
+  	background-color: #b2edf4;
+  	color : black;
+  }
+
+
+
+   a[title]  /* tous les titres des liens (tous les lien qui contiennent l'attribut titre)*/   
+   {
+   	color : red;
+   } 
+
+
+   p {
+   	font-size: 14px; /* tous les paragraphes ont une taille de 14 pixels */
+   	font-family: "Comic Sans MS", sans-serif; /*police du texte (si ne trouve pas "Comic sans ms", mettra la police par défaut "sans-serif") */
+   	text-align: justify; /*alignement des paragraphes : justifié */
+   	
+   }
+
+   .titre {
+	 font-size: xx-large; /* taille du titre "Bienvenu"*/
+	 font-family: Impact, sans-serif;
+	 border : solid; 
+	 border-radius: 10px;
+	 color : #084775;
+
+   }
+
+
+.souligné 
+{
+	text-decoration: underline; /* Le texte portant l'identifiant "souligné" sera souligné */
+}
+
+
+.imageFlottante 
+{
+	float : left; /* l'image d'id "imageFlottante" sera à gauche du texte écrit à la suite de la balise <img/> */
+}
+
+.finDuTexteEntourantLImage
+{
+	clear : left; /* indique qu'à partir du paragraphe d'id "finDuTexteEntourantLImage" , le texte reprend en dessous de l'image */
+}
+
+
+
+.Menu 
+{
+   background-color : #6893f2;
+   color : black;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   width: 25%
+}
+
+.elements /*éléments du menu*/
+{
+	margin : auto;
+
+}
+
+.table 
+{
+	border-collapse : collapse; 
+}
+
+.td, .th /*toutes les cellules du tableaux + les en-têtes */ 
+{
+	background-color: #b2f4de;
+	color : black;
+	border : 1px black solid ;
+ 
+}
+
+.oceanstream 
+{
+	font-family: cursive;
+	font-size: x-large;
+	color: #1897a5;
+}
+
+.titreSection1, .titreSection2, .titreSection3
+{
+	font-size: large;
+	font-weight: bold;
+}
+
+.s0, .s1, .s2, .s3, .piedPage
+{
+	width: 50%;
+	margin : auto; /*pour centrer le bloc*/
+}
+
+.s1, .s2, .s3
+{
+	border : solid;
+	border-radius: 10px;
+	border-color: #569da5;
+	padding : 12px; /* marges intérieures*/ 
+	margin-bottom: 25px; /* marges extérieures en bas*/
+
+}
+
+.imageEnTete
+{
+	border-radius : 10px;
+}
+
+.enTete
+{
+	width: 50%;
+	margin: auto; 
+	margin-bottom: 25px;
+}
+
+
+
