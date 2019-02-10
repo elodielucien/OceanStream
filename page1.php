@@ -3,24 +3,16 @@
 
 <!-- balise php de déclaration de toutes les variables -->
 <?php 
-$varTitle = "Bienvenue";
-$userInfos = array(
-'nom' => 'Lucien',
-'prenom' => 'Elodie',
-'adresse' => 'blabla',
-'age' => 22);
-?> 
-
-
-
-
-
-
-
-
-
-
-
+$varTitleS1 = "Démo";
+$varTitleS2 = "Le concept en détails";
+$varTitleS3 = "Résultats";
+$varTitleS4 = "L'équipe";
+$varTitleS5 = "Futur";
+$TitreConceptItem = "Le corail"; //varie selon où l'on passe la souris
+$titreArticle = titreArticle; //varie quand on clique sur une des flèches
+$titrePin = "Paris" // varie selon le pin sur lequel on clique
+$nomPersonneEquipe = "Adrien Landa"; //varie selon sur quelle photo on a cliqué
+$photoPersonneEquipe;
 
 
 
@@ -34,38 +26,46 @@ $userInfos = array(
 
     <body>
         
-    <div class ="Menu">
-        <nav class ="elements"> <!-- pour le menu du site -->
-                <div> <strong>Menu</strong> </div>
-                <div><a href = "page1.html" > Accueil </a> </div>
-                <div><a href = "Contenu/page2.html"> Page 2 </a> </div>
-
-        </nav>
-    </div>    
-
-
-        
 
 
 
-        <header class = "enTete"> <!-- en tête de la page-->
+
+
+        <header class = "enTete"> <!-- en tête de la page : photo vague-->
             <p>
-                <span class = oceanstream> OceanStream, l'association qui sauvera les écosystèmes coralliens ! </span><br/>
-                <img class = "imageEnTete" src = "Images/imageEnTete.jpg"/> 
+
+                <img class = "imageEnTete" src = "Images/imageEnTete.jpg"/>  <!--à changer-->
             </p>
+
+            <div class ="Menu"> <!-- Le menu doit être par dessus l'image de vague -->
+                <nav class ="elements"> <!-- pour le menu du site -->
+                    <div> <strong>Menu</strong> </div>
+                    <div> <a href=#demo>Démo du concept</a> </div> <br/> <!-- liens vers des ancres de la MEME page -->
+                    <div><a href = "#concept">Le concept en détails </a> </div><br/>
+                    <div><a href = "#resultats"> Résultats </a> </div><br/>
+                    <div><a href = "#lequipe"> L'équipe </a> </div><br/>
+                    <div><a href = "#futur"> Futur </a> </div><br/>
+
+
+                </nav>
+            </div>
+
         </header>
         
 
 
 
-         <section class ="s0">
-            <span class = "titre"> <?php echo $varTitle; ?> </span> <br/> <!--l'attribut class sert à donner un identifiant à n'importe quelle balise (p, h1, img...), réutilisé dans le fichier css-->
+         <section id = demo class ="s1"> <!-- simulation du concept : vidéo du flux en image de fond -->
+            <h1 class = "titreSection1"> <?php echo $varTitleS1; ?> </h1> <br/> <!--l'attribut class sert à donner un identifiant à n'importe quelle balise (p, h1, img...), réutilisé dans le fichier css-->
 
             <p>
-            Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s'); ?>. 
-            Bonjour et <span class = "bienvenu"> bienvenue </span> sur notre site web !<br/> <!-- span sert à mettre un identifiant sur un mot précis-->
+            Article du : <?php echo date('d/m/Y h:i:s'); ?>. <br/>
+                <span class = "TitreArticle"> <?php echo $titreArticle; ?> </span> <br/> <!-- span sert à mettre un identifiant sur un mot précis-->
         
-            C'est un <strong>premier essai</strong> de page web, <em>soyez indulgents.</em>
+            TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
+                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
+                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
+                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
             </p>
         </section>
        
@@ -73,68 +73,102 @@ $userInfos = array(
 
 
 
-       <section class = "s1">
-          <h1 class = "titreSection1"> Articles & magazines </h1> 
-            <ol>                       <!--test de liste non ordonnée -->
-    	      <li>poisson</li>
-              <li>coraux</li>
-              <li>baleines</li>
-            </ol>
+       <section id = concept class = "s2">  <!-- Explication du concept en détails -->
+          <h1 class = "titreSection2"> <?php echo $varTitleS2; ?> </h1>
+           <p>
+           <span class = "titreItem" <?php echo $TitreConceptItem; ?> </span>
+
+               <figure>
+                   <img src="Images/corail.jpg" <!-- Ici mettre les 6 images du cycle -->
+                        class = "imageFlottante"
+                        alt="Un corail"
+                        title="DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem"/> <br/>
+                   <!--
+                   src : chemin relatif de l'image,
+                   alt : affiché si l'image ne peut se charger,
+                   title : s'affiche quand on passe la souris sur l'image
+                   -->
+                   <figcaption>Notre cycle de fonctionnement</figcaption> <!--Légende de la figure -->
+               <br/>
+               </figure>
+
+
+           </p>
        </section>
        
 
 
-      <section class = "s2">
-         <h1 class = titreSection2> Vous inscrire </h1>
-         Je vous conseille le site suivant : <a href="http://OceanStream.com" title="Vous ne le regretterez pas !">OceanStream</a>, il est très réussi ! <br/>
-         Consultez également notre <a href="Contenu/page2.html">page 2</a>, en cours d'élaboration. <br/>
+      <section id = resultats class = "s3"> <!-- Carte du monde interactive : infos quand on clique sur chaque pin + possibilité d'en ajouter pour les administrateurs -->
+         <h1 class = titreSection3> <?php echo $varTitleS3; ?> </h1>
+          <span> <?php echo $titrePin; ?> </span>
+          <p>
+              <figure>
+                  <img src="Images/corail.jpg" class = "imageFlottanteMonde" alt="CarteDuMonde" />
+                  textetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
+                  textetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
+                  textetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
+                  <br/>
+                  <!--
+                  Ceci est le texte entourant la carte du monde (à gauche) : varie selon le pin où on a cliqué => boucle if sur le fichier controller ?
+                  src : chemin relatif de l'image,
+                  alt : affiché si l'image ne peut se charger,
+                  title : s'affiche quand on passe la souris sur l'image
 
-    
-         <a href=#monAncre>AllerVersAncre</a> <br/> <!-- lien permettant de renvoyer vers l'ancre "monAncre". -->
-         <a href = Contenu/page2.html#AncrePage2>AllerVersAncrePage2 </a> <br/> <!-- lien permettant de renvoyer vers l'ancre "AncrePage2" de la page 2 -->
+                   -->
+
+
+               </figure>
+
+
+
+          </p>
+
+
       </section>
       
 
 
    
 
-      <section class = "s3">
-        <h1 class ="titreSection3"> Qui sommes-nous ?</h1>
-        <p>
-        Normalement, si vous cliquez sur le lien, cela vous amènera plus bas dans la même page (à condition que la page comporte suffisamment de texte pour que les barres de défilement se déplacent automatiquement).
-        Voici un exemple de page comportant beaucoup de texte et utilisant les ancres (j'ai mis n'importe quoi dans le texte pour remplir ) :
-        S'il ne se passe rien quand vous cliquez sur les liens, c'est qu'il n'y a pas assez de texte. Dans ce cas, vous pouvez soit rajouter du blabla dans la page pour qu'il y ait (encore) plus de texte, soit réduire la taille de la fenêtre de votre navigateur pour faire apparaître les barres de défilement sur le côté.
+      <section  id = lequipe class = "s4">
+          <!--faire deux boîtes verticales l'une à côté de l'autre : à gauches les photos cliquables et à droite
+          le profil détaillé correspondant à la personne -->
+        <h1 class ="titreSection4"> <?php echo $varTitleS4; ?> </h1>
 
-        L'attributidsert à donner un nom « unique » à une balise, pour s'en servir de repère. Et, croyez-moi, vous n'avez pas fini d'entendre parler de cet attribut. Ici, on s'en sert pour faire un lien vers une ancre mais, en CSS, il nous sera très utile pour « repérer » une balise précise, vous verrez. 
-        cependant de créer des id avec des espaces ou des caractères spéciaux, utilisez simplement, dans la mesure du possible, des lettres et chiffres pour que la valeur soit reconnue par tous les navigateurs.
-
-        Lien vers une ancre située dans une autre page
-        Alors là je vous préviens, on va faire le Mégamix !
-
-
-        <span class = "souligné">Test de texte souligné </span> <br/>
-
-
-        L'idée, c'est de faire un lien qui ouvre une autre page ET qui amène directement à une ancre située plus bas sur cette page.
-        En pratique c'est assez simple à faire : il suffit de taper le nom de la page, suivi d'un dièse (#), suivi du nom de l'ancre.
-        … vous amènera sur la pageancres.html, directement au niveau de l'ancre appeléerollers.
-
-        Voici une page qui contient trois liens, chacun amenant vers une des ancres de la page de l'exemple précédent 
-        </p>
-
-        <span id= monAncre>MonAncre</span> <br/> <!-- Ancre : id est un repère permettant au lien href = #monAncre de renvoyer à cet endroit -->
-
-        Vous pouvez envoyer un email à l'adresse suivante : <a href = "mailto:elodielucien@gmail.com">elodielucien@gmail.com</a> <br/> <!-- lien ouvrant une fenêtre d'email -->
-
-        <figure>
-          <img src="Images/corail.jpg" class = "imageFlottante" alt="Un corail" title="Magnifique!"/> Ceci est le texte entourant l'image, qui sera une image flottante à gauche du texte grâce au code css. <br/> <!--src : chemin relatif de l'image, alt : affiché si l'image ne peut se charger, 
-          title : s'affiche quand on passe la souris sur l'image -->
-          <figcaption>Voici une image de corail</figcaption> <!--Légende de la figure -->
-          <p class = "finDuTexteEntourantLImage">Ceci est la suite du texte écrit en dessous de l'image et non à droite.</p> <br/>
-        </figure>
+          <!-- ce qui suit est dans la boîte de droite -->
+          <p>
+              <figure>
+                  <img src = "" class = photoPersonne />
+                  <span> <?php echo $nomPersonneEquipe; ?> </span> //texte entourant l'image : ici le nom de la personne
+              </figure>
+              <br/>
+              textetextetextetextetextetextetextetextetextetextetextetextetextetexte
+              textetextetextetextetextetextetextetextetextetextetextetextetextetexte
+              textetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
+          </p>
 
 
-  </section>
+      </section>
+
+
+
+
+
+
+        <section  id = futur class = "s5">
+            <h1 class ="titreSection5"> <?php echo $varTitleS5; ?> </h1>
+            <p>
+                textetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
+                textetextetextetextetextetextetextetextetextetextetextetextetextetexte
+                textetextetextetextetextetextetextetextetextetextetextetextetextetexte
+
+            </p>
+
+
+        </section>
   
 
 

@@ -6,12 +6,6 @@
 
 
 
-   a[title]  /* tous les titres des liens (tous les lien qui contiennent l'attribut titre)*/   
-   {
-   	color : red;
-   } 
-
-
    p {
    	font-size: 14px; /* tous les paragraphes ont une taille de 14 pixels */
    	font-family: "Comic Sans MS", sans-serif; /*police du texte (si ne trouve pas "Comic sans ms", mettra la police par défaut "sans-serif") */
@@ -83,7 +77,7 @@
 	color: #1897a5;
 }
 
-.titreSection1, .titreSection2, .titreSection3
+.titreSection1, .titreSection2, .titreSection3, .titreSection4, .titreSection5
 {
 	font-size: large;
 	font-weight: bold;
@@ -104,6 +98,30 @@
 	margin-bottom: 25px; /* marges extérieures en bas*/
 
 }
+
+.s1
+{
+	color : cyan;
+}
+
+  .s2
+  {
+	  color : darkturquoise;
+  }
+  .s3
+  {
+	  color : darkcyan;
+  }
+
+  .s4
+  {
+	  color : darkcyan;
+  }
+
+  .s5
+  {
+	  color : #084775;
+  }
 
 .imageEnTete
 {
