@@ -1,15 +1,9 @@
   body 
   {
-  	background-color: #b2edf4;
+  	background : linear-gradient(#b2edf4,#084775 );
   	color : black;
   }
 
-
-
-   a[title]  /* tous les titres des liens (tous les lien qui contiennent l'attribut titre)*/   
-   {
-   	color : red;
-   } 
 
 
    p {
@@ -49,12 +43,12 @@
 
 .Menu 
 {
-   background-color : #6893f2;
+   background-color : #b2edf4;
    color : black;
-   border-radius: 10px;
+
    display: flex;
    flex-direction: column;
-   width: 25%
+   width: 100%
 }
 
 .elements /*éléments du menu*/
@@ -83,32 +77,25 @@
 	color: #1897a5;
 }
 
-.titreSection1, .titreSection2, .titreSection3
+.titreSection1, .titreSection2, .titreSection3, .titreSection4, .titreSection5
 {
 	font-size: large;
 	font-weight: bold;
 }
 
-.s0, .s1, .s2, .s3, .piedPage
+ .s1, .s2, .s3, .s4, .s5, .piedPage
 {
-	width: 50%;
+	width: 100%;
 	margin : auto; /*pour centrer le bloc*/
 }
 
-.s1, .s2, .s3
+.s1, .s2, .s3, .s4, .s5
 {
-	border : solid;
-	border-radius: 10px;
-	border-color: #569da5;
-	padding : 12px; /* marges intérieures*/ 
 	margin-bottom: 25px; /* marges extérieures en bas*/
 
 }
 
-.imageEnTete
-{
-	border-radius : 10px;
-}
+
 
 .enTete
 {
