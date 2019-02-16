@@ -1,6 +1,6 @@
   body 
   {
-  	background-color: #b2edf4;
+  	background : linear-gradient(#b2edf4,#084775 );
   	color : black;
   }
 
@@ -23,10 +23,6 @@
    }
 
 
-.souligné 
-{
-	text-decoration: underline; /* Le texte portant l'identifiant "souligné" sera souligné */
-}
 
 
 .imageFlottante 
@@ -39,16 +35,27 @@
 	clear : left; /* indique qu'à partir du paragraphe d'id "finDuTexteEntourantLImage" , le texte reprend en dessous de l'image */
 }
 
-
+.enTete
+{
+	width: 100%;
+	margin: auto; 
+	margin-bottom: 25px;
+}
 
 .Menu 
 {
-   background-color : #6893f2;
-   color : black;
-   border-radius: 10px;
+   
+   color : white;
+
    display: flex;
    flex-direction: column;
-   width: 25%
+   width: 100%
+}
+
+.menuGauche
+{
+    background-color: white;
+    flex-direction: column;
 }
 
 .elements /*éléments du menu*/
@@ -57,10 +64,7 @@
 
 }
 
-.table 
-{
-	border-collapse : collapse; 
-}
+
 
 .td, .th /*toutes les cellules du tableaux + les en-têtes */ 
 {
@@ -83,57 +87,21 @@
 	font-weight: bold;
 }
 
-.s0, .s1, .s2, .s3, .piedPage
+ .s1, .s2, .s3, .s4, .s5, .piedPage
 {
-	width: 50%;
+	width: 100%;
 	margin : auto; /*pour centrer le bloc*/
 }
 
-.s1, .s2, .s3
+.s1, .s2, .s3, .s4, .s5
 {
-	border : solid;
-	border-radius: 10px;
-	border-color: #569da5;
-	padding : 12px; /* marges intérieures*/ 
 	margin-bottom: 25px; /* marges extérieures en bas*/
 
 }
 
-.s1
-{
-	color : cyan;
-}
 
-  .s2
-  {
-	  color : darkturquoise;
-  }
-  .s3
-  {
-	  color : darkcyan;
-  }
 
-  .s4
-  {
-	  color : darkcyan;
-  }
 
-  .s5
-  {
-	  color : #084775;
-  }
-
-.imageEnTete
-{
-	border-radius : 10px;
-}
-
-.enTete
-{
-	width: 50%;
-	margin: auto; 
-	margin-bottom: 25px;
-}
 
 
 
