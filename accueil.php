@@ -32,12 +32,15 @@ $photoPersonneEquipe;
 
 
         <header class = "enTete"> <!-- en tête de la page : photo vague-->
-            <p>
 
-                <img class = "imageEnTete" src = "Maquettes/photoAccueilProvisoire.jpg" title = "imageProvisoire"/>  <!--à changer-->
-            </p>
+          
+           
+              <p>
+                <img class = "logo" src = "Maquettes/elementsJpg/ELEMENTS-AD/Logo/Ocean Stream noir.png" /> 
+              </p>
+              
 
-            <div class ="Menu"> <!-- Le menu doit être par dessus l'image de vague -->
+              <div class ="Menu"> <!-- Le menu doit être par dessus l'image de vague -->
                 <nav class ="elements"> <!-- pour le menu principal du site -->
                     
                     <div> <a href=#flux>Flux</a> </div> <br/> <!-- liens vers des ancres de la MEME page -->
@@ -51,61 +54,85 @@ $photoPersonneEquipe;
                 </nav>
             </div>
 
-        </header>
-
-        <?php include("menu.php"); ?>
-        
-
-
-
-         <section id = flux class ="s1"> <!-- simulation du concept : vidéo du flux en image de fond -->
-            <h1 class = "titreSection1"> <?php echo $varTitleS1; ?> </h1> <br/> <!--l'attribut class sert à donner un identifiant à n'importe quelle balise (p, h1, img...), réutilisé dans le fichier css-->
-
-            <p>
            
-                <span class = "TitreArticle"> <?php echo $titreArticle; ?> </span> <br/> <!-- span sert à mettre un identifiant sur un mot précis-->
-        
-            TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
-                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
-                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
-                TexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticleTexteArticle
-            </p>
-        </section>
+              <p>
+                <img  class = "imageEnTete" src = "Maquettes/photoAccueilProvisoire.jpg" title = "imageProvisoire"/>  <!--à changer-->
+                <!--Logo --> 
+              </p>
+
+          
+
+        </header>
+        <div class = "conteneur1">
+            
+            <div>
+               <?php include("menu.php"); ?>
+            </div>
+
+             <div>
+                  <h1 class = "titreSection1"> <?php echo $varTitleS1; ?> </h1>
+                  <section id = flux class ="s1"> <!-- simulation du concept : vidéo du flux en image de fond -->
+                   <p>
+           
+                       <img src="eau.jpg">
+                       TexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexte
+                       TexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexte
+                       TexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexte
+                       TexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexteTexte
+                   </p>
+               </section>
+           </div>
+
+      </div>
        
 
 
 
+    <div class = "conteneur2">  
+         <div>
+               <?php include("menu.php"); ?>
+         </div>
 
-       <section id = concept class = "s2">  <!-- Explication du concept en détails -->
-          <h1 class = "titreSection2"> <?php echo $varTitleS2; ?> </h1>
-           <p>
-           <span class = "titreItem" <?php echo $TitreConceptItem; ?> </span>
+        <div>
+                <h1 class = "titreSection2"> <?php echo $varTitleS2; ?>
+                <section id = concept class = "s2">  <!-- Explication du concept en détails -->
+                      
+                     <p>
+                         <span class = "titreItem"> <?php echo $TitreConceptItem; ?> </span>
 
-               <figure>
-                   <img src="Images/corail.jpg" <!-- Ici mettre les 6 images du cycle -->
-                        class = "imageFlottante"
-                        alt="Un corail"
-                        title="DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
-                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
-                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
-                         DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem"/> <br/>
+                         <figure>
+                              <img src=".jpg" >   <!-- Ici mettre les 6 images du cycle -->
+                              title="DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                              DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                             DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem
+                             DescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItemDescriptionItem"/> <br/>
                    <!--
                    src : chemin relatif de l'image,
                    alt : affiché si l'image ne peut se charger,
                    title : s'affiche quand on passe la souris sur l'image
                    -->
-                   <figcaption>Notre cycle de fonctionnement</figcaption> <!--Légende de la figure -->
-               <br/>
-               </figure>
+                        <figcaption>Notre cycle de fonctionnement</figcaption> <!--Légende de la figure -->
+                        <br/>
+                       </figure>
+                    </p>
+             </section>
+       </div>
 
-
-           </p>
-       </section>
+  </div>
        
 
 
+
+
+<div class = "conteneur3">
+  <div>
+    <?php include("menu.php"); ?>
+  </div>
+
+   <div>
+      <h1 class = titreSection3> <?php echo $varTitleS3; ?> </h1>
       <section id = projets class = "s3"> <!-- Carte du monde interactive : infos quand on clique sur chaque pin + possibilité d'en ajouter pour les administrateurs -->
-         <h1 class = titreSection3> <?php echo $varTitleS3; ?> </h1>
+         
           <span> <?php echo $titrePin; ?> </span>
           <p>
               <figure>
@@ -121,25 +148,26 @@ $photoPersonneEquipe;
                   title : s'affiche quand on passe la souris sur l'image
 
                    -->
-
-
                </figure>
-
-
-
           </p>
-
-
       </section>
-      
-
-
+   </div>
+</div>
    
 
+      
+    
+  
+
+<div class = conteneur4>
+  <div>
+    <?php include("menu.php"); ?>
+  </div>
+    <div>
+      <h1 class ="titreSection4"> <?php echo $varTitleS4; ?> </h1>
       <section  id = equipe class = "s4">
           <!--faire deux boîtes verticales l'une à côté de l'autre : à gauches les photos cliquables et à droite
           le profil détaillé correspondant à la personne -->
-        <h1 class ="titreSection4"> <?php echo $varTitleS4; ?> </h1>
 
           <!-- ce qui suit est dans la boîte de droite -->
           <p>
@@ -156,13 +184,21 @@ $photoPersonneEquipe;
 
       </section>
 
+    </div>
+</div>
 
 
 
+      
 
 
+<div class = "conteneur5">
+    <div>
+      <?php include("menu.php"); ?>
+    </div>
+      <div>
+        <h1 class ="titreSection5"> <?php echo $varTitleS5; ?> </h1>
         <section  id = histoire class = "s5">
-            <h1 class ="titreSection5"> <?php echo $varTitleS5; ?> </h1>
             <p>
                 textetextetextetextetextetextetextetextetextetextetextetextetextetextetexte
                 textetextetextetextetextetextetextetextetextetextetextetextetextetexte
@@ -172,8 +208,8 @@ $photoPersonneEquipe;
 
 
         </section>
-  
-
+      </div>
+</div>
 
         <footer class = "piedPage">  <!--pied de page -->
             <table>

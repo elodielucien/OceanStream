@@ -13,27 +13,7 @@
    	
    }
 
-   .titre {
-	 font-size: xx-large; /* taille du titre "Bienvenu"*/
-	 font-family: Impact, sans-serif;
-	 border : solid; 
-	 border-radius: 10px;
-	 color : #084775;
-
-   }
-
-
-
-
-.imageFlottante 
-{
-	float : left; /* l'image d'id "imageFlottante" sera à gauche du texte écrit à la suite de la balise <img/> */
-}
-
-.finDuTexteEntourantLImage
-{
-	clear : left; /* indique qu'à partir du paragraphe d'id "finDuTexteEntourantLImage" , le texte reprend en dessous de l'image */
-}
+ 
 
 .enTete
 {
@@ -42,20 +22,42 @@
 	margin-bottom: 25px;
 }
 
+.imageEnTete
+{
+	width: 80%;
+	height: 50%;
+	display : flex;
+	margin : auto;
+}
+
+.logo
+{
+	width: 50%;
+	position: absolute;
+    display: flex
+    margin : auto;
+
+    
+}
+
 .Menu 
 {
    
    color : white;
-
+   position : absolute;
    display: flex;
    flex-direction: column;
    width: 100%
+  
 }
 
 .menuGauche
 {
     background-color: white;
+    display: flex;
     flex-direction: column;
+    width: 10%;
+    color : black;
 }
 
 .elements /*éléments du menu*/
@@ -65,14 +67,6 @@
 }
 
 
-
-.td, .th /*toutes les cellules du tableaux + les en-têtes */ 
-{
-	background-color: #b2f4de;
-	color : black;
-	border : 1px black solid ;
- 
-}
 
 .oceanstream 
 {
@@ -91,6 +85,8 @@
 {
 	width: 100%;
 	margin : auto; /*pour centrer le bloc*/
+	display: flex;
+
 }
 
 .s1, .s2, .s3, .s4, .s5
@@ -98,6 +94,14 @@
 	margin-bottom: 25px; /* marges extérieures en bas*/
 
 }
+
+.conteneur1, .conteneur2, .conteneur3, .conteneur4, .conteneur5
+{
+	display: flex;
+
+}
+
+
 
 
 
